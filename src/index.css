@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  --color-primary: #2563eb;
+  --color-bg-site: #f8fafc;
+  --color-text-dark: #0f172a;
+  --color-text-light: #64748b;
+  --color-border-ui: #e2e8f0;
+  --color-success-ui: #10b981;
+  --color-surface-ui: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-bg-site text-text-dark;
+  }
+}
+
+.card-ui {
+  @apply bg-surface-ui border border-border-ui rounded-xl overflow-hidden;
+}
+
+.nav-item-ui {
+  @apply px-4 py-3 rounded-lg font-medium text-text-light hover:bg-bg-site hover:text-primary transition-colors cursor-pointer;
+}
+
+.nav-item-ui.active {
+  @apply bg-bg-site text-primary;
+}
+
+.log-panel-ui {
+  @apply bg-text-dark text-[#94a3b8] rounded-xl p-5 font-mono text-xs overflow-hidden;
+}
+
+.btn-primary-ui {
+  @apply bg-primary text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2;
+}
+
+.btn-secondary-ui {
+  @apply border border-border-ui bg-surface-ui text-text-dark px-4 py-2 rounded-lg font-medium hover:bg-gray-50 transition-colors;
+}
+
+.status-capsule {
+  @apply flex items-center gap-3 bg-white px-4 py-2 rounded-full border border-border-ui text-sm font-semibold;
+}
+
+.status-dot-ui {
+  @apply w-2 h-2 rounded-full bg-success-ui;
+}
+
+
